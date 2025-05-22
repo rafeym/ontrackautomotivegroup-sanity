@@ -5,10 +5,9 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'ontrackautomotive-be',
-
-  projectId: 'nyqyny97',
-  dataset: 'production',
+  title: process.env.SANITY_STUDIO_TITLE,
+  projectId: process.env.SANITY_STUDIO_PROJECTID!,
+  dataset: process.env.SANITY_STUDIO_DATASET!,
 
   plugins: [structureTool(), visionTool()],
 
