@@ -30,6 +30,11 @@ export default {
       type: 'date',
     },
     {
+      name: 'bookingKey',
+      type: 'string',
+      hidden: true,
+    },
+    {
       name: 'car',
       title: 'Car',
       type: 'object',
