@@ -27,10 +27,13 @@ export default defineType({
     defineField({name: 'fuelType', title: 'Fuel Type', type: 'string'}), // Fuel Type (e.g., Gasoline)
     defineField({name: 'address', title: 'Dealership Address', type: 'string'}), // Dealership Address
     defineField({
-      name: 'carfaxUrl',
-      title: 'Carfax Report URL',
-      type: 'url',
-      description: 'Link to the Carfax vehicle history report',
+      name: 'carfaxPdf',
+      title: 'Carfax Report PDF',
+      type: 'file',
+      options: {
+        accept: '.pdf',
+      },
+      description: 'Upload the Carfax vehicle history report PDF file',
     }),
     defineField({
       name: 'slug',
