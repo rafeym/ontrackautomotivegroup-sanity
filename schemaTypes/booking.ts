@@ -1,4 +1,6 @@
 // schemas/booking.ts
+import type {Rule} from 'sanity'
+
 export default {
   name: 'booking',
   title: 'Booking',
@@ -33,6 +35,7 @@ export default {
       name: 'bookingKey',
       type: 'string',
       hidden: true,
+      validation: (rule: Rule) => rule.unique(),
     },
     {
       name: 'car',
